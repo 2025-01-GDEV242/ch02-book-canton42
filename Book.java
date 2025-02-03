@@ -30,7 +30,7 @@ class Book
     }
     
     //returns the title field
-    public String title(){
+    public String getTitle(){
         return title;
     }
 }
