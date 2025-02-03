@@ -68,11 +68,19 @@ class Book
     }
     
     //87 - add a printDetails method that displays formatted output for all private fields
+    //89 - modify printDetails to add new content
     public void printDetails(){
         System.out.println("############");
         System.out.println("# Title: " + title);
         System.out.println("# Author: " + author);
         System.out.println("# Pages: " + pages);
+        
+        if (refNumber.length() == 0){
+            System.out.println("# Reference Number: ZZZ");
+        } else {
+            System.out.println("# Reference Number: " + refNumber);
+        }
+        
         System.out.println("############");
     }
 }
