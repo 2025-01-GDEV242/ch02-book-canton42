@@ -33,4 +33,16 @@ class Book
     public String getTitle(){
         return title;
     }
+    
+    //prints author field to terminal
+    public void printAuthor(){
+        System.out.println(author);
+    }
+    
+    //prints title field to terminal
+    public void printTitle(){
+        System.out.println(title);
+    }
+    
+    
 }
