@@ -33,8 +33,13 @@ class Book
     // Add the methods here ...
     
     //88 - modify object add a new private field with appropriate accessors
+    //90 - modify object add a new private field with appropriate accessors, mutators and reporting
     public void setRefNumber(String ref){
-        refNumber = ref;
+        if (ref.length() < 3) {
+            System.out.println("Error: illegal reference number.");
+        } else {
+            refNumber = ref;
+        }
     }
     
     //83 - create accessors for String fields
