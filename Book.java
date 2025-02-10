@@ -13,6 +13,7 @@ class Book
     private String title;
     private int pages;
     private String refNumber;
+    private int borrowed;
     
     /**
      * Set the author and title fields when this object
@@ -21,16 +22,23 @@ class Book
     
     //85 - modify object add a new private field with appropriate accessors
     //88 - modify object add a new private field with appropriate accessors
+    //91 - modify object add a new private field with appropriate accessors, mutators and reporting
     public Book(String bookAuthor, String bookTitle, int bookPages)
     {
         author = bookAuthor;
         title = bookTitle;
         pages = bookPages;
         refNumber = "";
+        borrowed = 0;
 
     }
 
     // Add the methods here ...
+    
+    //91 - modify object add a new private field with appropriate accessors, mutators and reporting
+    public void borrow() {
+        borrowed++;
+    }
     
     //88 - modify object add a new private field with appropriate accessors
     //90 - modify object add a new private field with appropriate accessors, mutators and reporting
@@ -62,6 +70,11 @@ class Book
         return refNumber;
     }
     
+    //91 - modify object add a new private field with appropriate accessors, mutators and reporting
+    public int getBorrowed(){
+        return borrowed;
+    }
+    
     //84 - create print utility methods for private fields
     public void printAuthor(){
         System.out.println(author);
@@ -74,11 +87,13 @@ class Book
     
     //87 - add a printDetails method that displays formatted output for all private fields
     //89 - modify printDetails to add new content
+    //91 - modify object add a new private field with appropriate accessors, mutators and reporting
     public void printDetails(){
         System.out.println("############");
         System.out.println("# Title: " + title);
         System.out.println("# Author: " + author);
         System.out.println("# Pages: " + pages);
+        System.out.println("# Borrowed: " + borrowed + " times");
         
         if (refNumber.length() == 0){
             System.out.println("# Reference Number: ZZZ");
