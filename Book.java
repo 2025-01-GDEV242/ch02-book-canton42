@@ -9,11 +9,17 @@
 class Book
 {
     // The fields.
+    
+    //85 - modify object add a new private field with appropriate accessors
+    //88 - modify object add a new private field with appropriate accessors
+    //91 - modify object add a new private field with appropriate accessors, mutators and reporting
+    //92 - modify object add a new private field with appropriate accessors, mutators and reporting
     private String author;
     private String title;
     private int pages;
     private String refNumber;
     private int borrowed;
+    private boolean courseText;
     
     /**
      * Set the author and title fields when this object
@@ -23,13 +29,15 @@ class Book
     //85 - modify object add a new private field with appropriate accessors
     //88 - modify object add a new private field with appropriate accessors
     //91 - modify object add a new private field with appropriate accessors, mutators and reporting
-    public Book(String bookAuthor, String bookTitle, int bookPages)
+    //92 - modify object add a new private field with appropriate accessors, mutators and reporting
+    public Book(String bookAuthor, String bookTitle, int bookPages, boolean isCourseText)
     {
         author = bookAuthor;
         title = bookTitle;
         pages = bookPages;
         refNumber = "";
         borrowed = 0;
+        courseText = isCourseText;
 
     }
 
@@ -40,6 +48,10 @@ class Book
         borrowed++;
     }
     
+    //92 - modify object add a new private field with appropriate accessors, mutators and reporting
+    public boolean isCourseText() {
+        return courseText;
+    }
     //88 - modify object add a new private field with appropriate accessors
     //90 - modify object add a new private field with appropriate accessors, mutators and reporting
     public void setRefNumber(String ref){
